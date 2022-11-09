@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        fontFamily: 'Georgia',
       ),
       home: const MyHomePage(title: 'Program Counter'),
     );
@@ -78,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
@@ -95,6 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Center(
+
         
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -151,6 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
           ),
           Align(
+            
             alignment: Alignment.bottomRight,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
