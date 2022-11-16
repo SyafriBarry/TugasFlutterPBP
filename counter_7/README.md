@@ -13,7 +13,7 @@ jadi Jika kita ingin membuat komponen sederhana dan bersifat statis maka Statele
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya
 MaterialApp(): adalah sebuah parent dimana yang diapitnya akan menerapkan style material design. Selain itu, dia juga memiliki control untuk mengatur route, theme, supported locales, dan lain sebagainya
 
-Scaffold : Sebagai Landasan Halaman
+Scaffold() : Sebagai Landasan Halaman
 
 AppBar() : untuk membuat sebuah bar pada aplikasi, salah satu contohnya adalah menampilkan teks
 
