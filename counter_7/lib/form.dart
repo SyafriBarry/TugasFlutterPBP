@@ -94,7 +94,6 @@ class _MyFormPageState extends State<MyFormPage> {
                               borderRadius: BorderRadius.circular(5.0),
                             ),
                           ),
-                        
                           inputFormatters: <TextInputFormatter>[
                             FilteringTextInputFormatter.digitsOnly
                           ],
@@ -140,33 +139,33 @@ class _MyFormPageState extends State<MyFormPage> {
                         ),
                       ),
                       Center(
-                    child: TextButton(
-                      child: Text("Pilih tanggal"),
-                      onPressed: () {
-                        showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2000),
-                          lastDate: DateTime(2099),
-                        ).then((date) {
-                          //tambahkan setState dan panggil variabel _dateTime.
-                          setState(() {
-                            _date = date!;
-                          });
-                        });
-                      },
-                    ),
-                  ),
-                  Center(
-                    child: Text(
-                      "Pilihan Tanggal: " + _date.toString().split(' ')[0],
-                      style: const TextStyle(
-                        fontSize: 16.0,
-                        // color: Colors.black87,
-                        fontWeight: FontWeight.normal,
+                        child: TextButton(
+                          child: Text("Pilih tanggal"),
+                          onPressed: () {
+                            showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime(2099),
+                            ).then((date) {
+                              //tambahkan setState dan panggil variabel _dateTime.
+                              setState(() {
+                                _date = date!;
+                              });
+                            });
+                          },
+                        ),
                       ),
-                    ),
-                  ),
+                      Center(
+                        child: Text(
+                          "Pilihan Tanggal: " + _date.toString().split(' ')[0],
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                            // color: Colors.black87,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ),
                       TextButton(
                         child: const Text(
                           "Simpan",

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/form.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/drawer.dart';
+import 'package:intl/intl.dart';
 
 
 
@@ -29,7 +30,14 @@ class _MyDataPageState extends State<MyDataPage> {
                   subtitle:Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children:[Text(item.nominal.toString()), 
                   Text(item.tipe),
-                  Text(item.date.toString())]),
+                  //Text(item.date.toString().substring(0,10))
+                  Text(
+                    DateFormat(
+                      'EEEE, d MMMM, yyyy'
+                    ).format(item.date),
+                    style: TextStyle(fontSize: 15),
+                    textAlign: TextAlign.left),
+                  ]),
                   
                 );
               },
