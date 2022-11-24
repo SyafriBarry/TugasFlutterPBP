@@ -93,7 +93,8 @@ Kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu, a
 FutureBuilder() berfungsi untuk mendukung kegiatan asinkronus 
 CircularProgressIndicator() berfungsi untuk memberikan bahwa aplikasi sedang berjalan
 GestureDetector() berfungsi untuk pendeteksi gerakan pada widget di flutter
-ElevatedButton() berfungsi untuk membuat button kembali 
+ElevatedButton() berfungsi untuk membuat button kembali
+SeizedBox() berfungsi untuk memberikan space 
 #
 ### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
 1. membuat sebuah model untuk memisahkannya dengan data yang lain agar lebih mudah diingat tempat menyimpannya

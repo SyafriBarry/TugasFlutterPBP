@@ -11,7 +11,8 @@ class WatchListDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail'),
+        title: Text('Detail MyWatchList'),
+        centerTitle: true,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -27,45 +28,79 @@ class WatchListDetail extends StatelessWidget {
       drawer: myDrawer(),
       body: Container(
         margin: new EdgeInsets.symmetric(vertical: 20.0),
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                 Colors.blue,
+                 Colors.red
+                ])
+          ),
         child: Column(
           children: [
             Center(
               child: Text(data.title,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32)),
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold, 
+                    fontSize: 32,
+                    color: Color.fromARGB(255, 15, 15, 15))),
             ),
+            SizedBox(
+              height: 50, 
+            ),
+            
             Row(
               children: [
                 Text("Release Date : ",
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                        TextStyle(
+                          fontWeight: FontWeight.bold, 
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 251, 249, 249))),
                 Text(data.releaseDate,
                     style:
-                        TextStyle(fontWeight: FontWeight.normal, fontSize: 16)),
+                        TextStyle(fontWeight: FontWeight.normal, 
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 251, 249, 249))),
               ],
             ),
             Row(
               children: [
                 Text("Rating : ",
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                        TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 251, 249, 249),)),
                 Text(data.rating.toString() + "/10",
                     style:
-                        TextStyle(fontWeight: FontWeight.normal, fontSize: 16)),
+                        TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 251, 249, 249))),
               ],
             ),
             Row(
               children: [
                 Text("Status : ",
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                        TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 251, 249, 249),)),
                 if (data.watched == 'Yes')
                   Text("Watched",
                       style: TextStyle(
-                          fontWeight: FontWeight.normal, fontSize: 16)),
+                          fontWeight: FontWeight.normal, 
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 251, 249, 249),)),
                 if (data.watched == 'No')
                   Text("Unwatched",
                       style: TextStyle(
-                          fontWeight: FontWeight.normal, fontSize: 16)),
+                          fontWeight: FontWeight.normal,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 251, 249, 249))),
               ],
             ),
             Row(
@@ -74,12 +109,13 @@ class WatchListDetail extends StatelessWidget {
                   "Review: ",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontSize: 16),
+                      color: Color.fromARGB(255, 251, 249, 249),
+                      fontSize: 20),
                 ),Text(
               data.review,
               style: const TextStyle(
-                color: Colors.black,
+                color: Color.fromARGB(255, 248, 246, 246),
+                fontSize: 20
               ),
             ),
               ],

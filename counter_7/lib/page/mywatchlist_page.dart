@@ -23,6 +23,7 @@ class _WatchListPageState extends State<WatchListPage> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('My Watch List'),
+          centerTitle: true,
           flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -85,16 +86,16 @@ class _WatchListPageState extends State<WatchListPage> {
                                       borderRadius: BorderRadius.circular(15.0),
                                       boxShadow: const [
                                           BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 2.0)
+                                              color: Color.fromARGB(255, 112, 149, 235),
+                                              blurRadius: 5.0)
                                         ])
                                   : BoxDecoration(
                                       color: Color.fromARGB(255, 239, 38, 24),
                                       borderRadius: BorderRadius.circular(15.0),
                                       boxShadow: const [
                                           BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 2.0)
+                                              color: Colors.yellow,
+                                              blurRadius: 5.0)
                                         ]),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -104,7 +105,13 @@ class _WatchListPageState extends State<WatchListPage> {
                                     "${snapshot.data![index].title}",
                                     style: const TextStyle(
                                       fontSize: 18.0,
+                                      fontFamily: 'Raleway',
                                       fontWeight: FontWeight.bold,
+                                      color: Color.fromARGB(255, 24, 23, 23),
+                                      decorationColor: Colors.red,
+                                      decorationStyle: TextDecorationStyle.wavy,
+                                      
+
                                     ),
                                   ),
                                 ],
