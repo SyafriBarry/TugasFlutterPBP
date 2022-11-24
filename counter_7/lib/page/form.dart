@@ -1,8 +1,10 @@
 import 'package:counter_7/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:counter_7/data.dart';
-import 'package:counter_7/drawer.dart';
+import 'package:counter_7/page/data.dart';
+import 'package:counter_7/page/drawer.dart';
+import 'package:http/http.dart';
+import 'package:counter_7/model/mywatchlist.dart';
 
 class DataBudget{
   String judul;
@@ -37,6 +39,17 @@ class _MyFormPageState extends State<MyFormPage> {
           return Scaffold(
             appBar: AppBar(
                 title: Text('Form Budget'),
+                flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                 Colors.blue,
+                 Colors.red
+                ])          
+          ),
+        ),
             ),
             drawer: const myDrawer(),
             body: Form(

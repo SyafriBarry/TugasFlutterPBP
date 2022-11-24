@@ -81,5 +81,35 @@ yaitu dengan cara menimpa layer sebelumnya dengan methode navigator.push dan bis
 ### elaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 1. membuat file drawer.dart untuk menerapkan template drawer pada setiap file yang kita inginkan. disini saya menambahkan pada file main, form dan data.dart.
 2. membuat file form.dart untuk membuat input masukan user dan membuat widget yang dibutuhkan pada file form.dart tersebut serta menimpannya.
-3. membuat file data.dart untuk menampilkan hasil inputan user yang disimpan pada form.dart. 
+3. membuat file data.dart untuk menampilkan hasil inputan user yang disimpan pada form.dart.
+#
+
+# Tugas 9 : Integrasi Web Service pada Flutter
+#
+
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu, akan tetapi hal tersebut menjadi kurang efisien dikarenakan kita tidak bisa mengakses data tersebut dalam bentuk suatu 'class'
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+FutureBuilder() berfungsi untuk mendukung kegiatan asinkronus 
+CircularProgressIndicator() berfungsi untuk memberikan bahwa aplikasi sedang berjalan
+GestureDetector() berfungsi untuk pendeteksi gerakan pada widget di flutter
+ElevatedButton() berfungsi untuk membuat button kembali 
+#
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. membuat sebuah model untuk memisahkannya dengan data yang lain agar lebih mudah diingat tempat menyimpannya
+2. menambahkan dependency http dengan bantuan import 'package:http/http.dart' as http;
+3. membuat detail Page untuk menampilkan data suatu Post dari List API
+4. membuat page HOME berisi data list dari API yang kita dapatkan
+5. pada page HOME yang sudah dibuat tambahkan  FutureBuilder -> Membuat widget / component yang menggunakan data yang diGET setelah data sukses diGET
+#
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+1. membuat file mywatchlist_page.dart untuk menampung halaman json 
+2. membuat folder page, model dan api untuk mengelompokan sesuai fungsi masing masing
+3. menambahkan drawer pada file mywatchlist_page
+4. membuat file fetch.dart dan menaruhnya pada folder api untuk mengambil data dari url json
+5. melakukan fetch pada file mywatchlist_page.dart dengan bantuan futureBuilder()
+6. kemudian data yang diambil akan ditampilkan di mywatchlist_page.dart 
+7. Membuat navigator push yang akan menampilkan detail dari film yang diGET ketika ditekan
+
+#
 
